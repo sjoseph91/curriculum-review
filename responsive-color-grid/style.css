@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.pink{
+    background-color: pink;
+}
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: skyblue;
+}
+.green{
+    background-color: lime;
+}
+.orange{
+    background-color: orange;
+}
+
+.pink, .red, .blue, .green, .orange{
+    height: 11vh;
+    width: 100%;
+    border: 2px solid white;
+}
+
+@media only screen and (min-width: 768px){
+    .pink,
+    .red-container,
+    .blue-container,
+    .last-row{
+        height: 24vh;
+    }
+        .red,
+        .blue,
+        .green,
+        .orange {
+            height: inherit;
+            border: 2px solid white;
+        }
+    
+    div.red-container{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    div.blue-container{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    div.green{
+        width: 75%;
+    }
+    div.orange{
+        width: 25%;
+    }
+    .green, .orange{
+        display: inline-block;
+    }
+    
+    
+}
