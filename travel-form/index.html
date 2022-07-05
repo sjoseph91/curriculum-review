@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Travel Form</title>
+</head>
+<body>
+    <h1>Travel Form</h1>
+    <main>
+        <div class="form-container">
+            <form name="travelForm" id="travelForm">
+                <label for="firstName">First Name: </label>
+                <input type="text" name="firstName" />
+                <label for="lastName">Last Name: </label>
+                <input type="text" name="lastName" />
+                <label for="age">Age: </label>
+                <input type="number" name="age" min="1" max="100"/>
+                <div class="radio">
+                    <div id="gender">Gender: </div>
+                    <input type="radio" id="male"name="gender" value="male"> <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">Female</label>
+                </div>
+                <div class="location">
+                    <select name="destination">
+                        <option value="">Choose desination</option>
+                        <option value="Cleveland">Cleveland</option>
+                        <option value="Columbus">Columbus</option>
+                        <option value="Akron">Akron</option>
+                    </select>
+                </div>
+                <div class="dietary">
+                    <div>Dietary Restrictions</div>
+                    <input type="checkbox" name="dietary" value="kosher" id="kosher"checked />
+                    <label for="kosher">Kosher</label>
+                    <input type="checkbox" name="dietary" value="vegetarian" id="vegetarian"  />
+                    <label for="vegetarian">Vegetarian</label>
+                    <input type="checkbox" name="dietary" value="halal" id="halal"  />
+                    <label for="halal">Halal</label>
+                </div>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+    <script src="app.js"></script>
+
+</body>
+</html>
