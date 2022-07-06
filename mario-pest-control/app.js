@@ -1,0 +1,3 @@
+const GOOMBA_PRICE = 5;
+const BOBOMBS_PRICE = 7;
+const CHEEP_CHEEP_PRICE = 11;
