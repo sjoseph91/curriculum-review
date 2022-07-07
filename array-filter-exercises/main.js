@@ -32,17 +32,32 @@
 // //  { name: 'Paris Hilton', member: true },
 // //  { name: 'Bob Ziroll', member: true } ]
 
-function ofAge(arr){
-  return arr.filter(person => person.age >= 18);
+
+
+
+// function leastToGreatest(arr) {
+//     return arr.sort((a,b) => b - a);
+// }
+
+// console.log(leastToGreatest([1, 3, 5, 2, 90, 20])); // [1, 2, 3, 5, 20, 90]
+
+// function lengthSort(arr) {
+//   return arr.sort();
+// }
+
+// console.log(lengthSort(["dog", "wolf", "by", "family", "eaten"])); // ["by", "dog", "wolf", "eaten", "family"]
+
+function byAge(arr){
+  return arr.sort((a, b) => a.age - b.age);
 }
-// test
-console.log(ofAge([
-    { name: "Angelina Jolie", age: 80 },
-    { name: "Eric Jones", age: 2 },
-    { name: "Paris Hilton", age: 5 },
-    { name: "Kayne West", age: 16 },
-    { name: "Bob Ziroll", age: 100 }
+
+console.log(byAge([
+    { name: "Quiet Samurai", age: 22 },
+    { name: "Arrogant Ambassador", age: 100 },
+    { name: "Misunderstood Observer", age: 2 },
+    { name: "Unlucky Swami", age: 77 }
 ]));
-// =>
-//[ { name: 'Angelina Jolie', age: 80 },
-//  { name: 'Bob Ziroll', age: 100 } ]
+// => [ { name: 'Misunderstood Observer', age: 2 },
+//  { name: 'Quiet Samurai', age: 22 },
+//  { name: 'Unlucky Swami', age: 77 },
+//  { name: 'Arrogant Ambassador', age: 100 } ]
