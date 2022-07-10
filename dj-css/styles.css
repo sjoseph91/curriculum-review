@@ -14,12 +14,13 @@ header{
     display: grid;
     margin: 0 auto;
     grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
-    grid-template-rows: repeat(3, minmax(100px, 200px));
+    
     grid-gap: 5px;
     justify-content: center;
 }
 .container > div{
     border: 1px solid black;
+    min-height: 150px;
 
 }
 .box1{
