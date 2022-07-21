@@ -1,0 +1,29 @@
+{
+    "appetizers": [
+        {
+            "name": "salad",
+            "ingredients": ["vegetables", "dressing", "croutons"],
+            "description": "A nice, refreshing sald with seasonal veggies."
+        },
+        {
+            "name": "chicken tenders",
+            "ingredients": ["chicken", "breading", "sauce"],
+            "description": "A crispy basket of chicken tenders with your choice of sauce."
+        }
+    ],
+    "cold sandwhiches" : [
+        {
+            "name": "club",
+            "ingredients": ["vegetables", "dressing", "croutons"],
+            "description": "A nice, refreshing sandwhich"
+        },
+        {
+            "name": "pastrami",
+            "ingredients": ["pastrami", "breading", "sauce"],
+            "description": "A nice sandwhich with pastrami"
+        }
+    ],
+    "hot sandwhiches" : ["buffalo chicken", "philly"],
+    "desserts" : ["cake", "ice cream"],
+    "drinks" : ["pepsi", "water"]
+}
