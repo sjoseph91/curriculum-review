@@ -1,0 +1,17 @@
+.todoItem{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;;
+    height: 50px;
+    padding: 10px;
+}
+
+.completed > div{
+    text-decoration: line-through;
+}
+
+img{
+    border: 1px solid black;
+    max-width: 100%;
+    object-fit: cover;
+}
