@@ -3,3 +3,30 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  background-color: #23252C;
+  color: white;
+}
+
+.card{
+  margin: 10px auto;
+  border: 1px solid black;
+  height: 781px;
+  width: 317px;
+  background-color: #1A1B21;
+}
+.imgContainer{
+  width: 317px;
+  height: 317px;
+  margin-bottom: 21px;
+}
+
+.profile-pic{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name{
+  text-align: center;
+}
