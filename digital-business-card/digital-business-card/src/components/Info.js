@@ -1,5 +1,7 @@
 import React from "react";
 import pic from "../sequoia.jpg"
+import { FaEnvelope, FaLinkedin } from 'react-icons/fa';
+
 
 export default function Info(){
     return (
@@ -8,11 +10,11 @@ export default function Info(){
             <img className="profile-pic" src={pic} alt="profile-pic" />
         </div>
         <h1 className="name">Sean Joseph</h1>
-            <h3>Web Developer</h3>
-            <p>https://github.com/sjoseph91</p>
+            <h3 className="title">Web Developer</h3>
+            <p className="website">https://github.com/sjoseph91</p>
             <div className="contact">
-                <a className="email" href="www.email.com"><i></i>Email</a>
-                <a className="linkedin" href="www.linkedin.com"><i></i>LinkedIn</a>
+                <a className="email" href="www.email.com"><FaEnvelope />Email</a>
+                <a className="linkedin" href="www.linkedin.com"><FaLinkedin />LinkedIn</a>
             </div>
         </>
     )
