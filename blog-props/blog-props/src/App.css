@@ -1,0 +1,27 @@
+
+
+.hero{
+    height: 50vh;
+    background-image: url("./home-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+    color: white;
+}
+
+/*Navbar */
+nav{
+    font-size: 1.25rem;
+    padding: 10px 20px;
+    height: 50px;
+    background-color: grey;
+}
+nav > h3{
+    float: left;
+}
+nav > button {
+    float: right;
+}
+.links{
+    display: none;
+}
