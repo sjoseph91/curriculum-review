@@ -6,7 +6,7 @@ export default function BlogPost({data}){
         <div className="post">
            <div className="title">{title}</div>
            <div className="subTitle">{subTitle}</div>
-           <p>Posted by {author} on {date}</p>
+           <p>Posted by <span className="author">{author}</span> on {date}</p>
         </div>
     )
 }
