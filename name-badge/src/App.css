@@ -1,0 +1,60 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  margin: 10px;
+  padding: 10px;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.formContainer{
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+form, .badge{
+  display: grid;
+  grid-template-columns: minmax(1fr, 800px);
+  justify-items: center
+}
+.badge > *{
+  font-weight:bold;
+  letter-spacing: 0.5px;
+  padding: 3px;
+  margin-bottom: 5px;
+}
+.badge{
+  justify-items: first baseline;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 5px;
+}
+input{
+  padding: 5px;
+  width: 300px;
+  text-indent: 3px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+textarea{
+  grid-column: 1 / -1;
+  justify-self: stretch;
+  
+}
+@media only screen and (min-width: 750px){
+  form, .badge{
+    grid-template-columns: repeat(2, 350px);
+  }
+}
