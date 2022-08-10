@@ -1,0 +1,25 @@
+.app{
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    padding: 8px;
+    border-radius: 4px;
+    font-style: bold;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+}
+button:hover{
+    border-width: 3px;
+}
+
+button:active{
+    background-color: black;
+    color: white;
+}
