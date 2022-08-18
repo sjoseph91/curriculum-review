@@ -1,0 +1,58 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.2rem;
+}
+h1{
+  margin: 50px 0px;
+  text-align: center;
+}
+h2 {
+  margin: 10px 0px 30px;
+}
+.outerContainer{
+  border: 1px solid gray;
+  width: 900px;
+  padding: 10px;
+  display: flex;
+  margin: auto;
+}
+
+.preview, .selector{
+  width: 50%;
+  padding: 10px;
+}
+.preview{
+  border-right: 1px solid gray;
+}
+.preview .sample{
+  height: 300px;
+
+}
+
+textarea{
+  width: 100%;
+  min-height: 125px;
+  padding: 7px;
+  resize: none;
+  font-size: 1.0rem;
+}
+div.inputContainer{
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0px;
+}
+
+input[type="color"]{
+  width: 100px;
+}
+input[type="number"]{
+  margin-left: 10px;
+  width: 50px;
+  padding: 5px;
+}
