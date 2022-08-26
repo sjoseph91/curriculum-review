@@ -1,0 +1,53 @@
+*{
+  box-sizing: border-box;
+}
+body, html{
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 10vh;
+  width: 100%;
+}
+nav{
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+a{
+  padding: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+main, footer{
+  text-align: center;
+}
+main{
+  height: 80vh;
+}
+
+h1{
+  padding: 50px;
+  margin: 0;
+}
+
+button{
+  padding: 15px;
+  cursor: pointer;
+  margin-top: 200px;
+}
+
+footer{
+  position: fixed;
+  bottom: 0px;
+  height: 10vh;
+  width: 100%;
+}
