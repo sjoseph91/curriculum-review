@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#uglyForm{
+    padding: 20px;
+    height: 200px;
+    background-color: rgb(72, 182, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    padding: 5px;
+    text-indent: 3px;
+    width: 300px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+
+}
+.inputContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+button{
+    margin: auto;
+    padding: 10px;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    background-color: orange;
+    cursor: pointer;
+}
+.uglyThingContainer{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+/*Ugly Thing */
+
+.uglyThing{
+    width: 300px;
+    padding: 5px;
+    border: 1px solid black;
+    margin: 5px 15px;
+    border-radius: 10px;
+}
+.title{
+    text-align: center;
+    font-size: 1.3rem;
+}
+.description{
+    margin-bottom: 5px;
+}
+.uglyThing .buttons{
+    display: flex;
+    justify-content: space-evenly;
+}
+img{
+    width: 100%;
+}
+
