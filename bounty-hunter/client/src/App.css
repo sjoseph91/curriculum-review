@@ -1,0 +1,107 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+form{
+  min-width: 300px;
+  max-width: 1000px;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+}
+input[type="text"], input[type="number"]{
+  display:block;
+  padding: 5px;
+  text-indent: 3px;
+  margin-bottom: 10px;
+  min-width: 300px;
+  max-width: 600px;
+}
+label{
+  margin: 5px;
+
+}
+div.radio{
+  display: flex;
+  max-width: 600px;
+  min-width: 300px;
+  justify-content: space-evenly;
+}
+
+input[type="radio"]{
+  margin: 2px 3px;
+}
+form button{
+  padding: 7px;
+  color: black;
+  background-color: white;
+}
+form button:hover{
+  color: white;
+  background-color: black;
+}
+div.bounties{
+  min-width: 350px;
+  border: 1px solid black;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+}
+div.bounty{
+  min-width: 200px;
+  max-width: 300px;
+  margin: 10px;
+  border: 1px solid black;
+  min-height: 300px;
+  max-height: 450px;
+}
+div.imgContainer{
+  height: 50%;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+.bounty{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.name, .bountyAmount{
+  font-size: 1.2rem;
+  font-weight: bold;
+
+}
+.alive{
+  color: green;
+  font-weight: bold;
+}
+
+.dead {
+  color: red;
+  font-style: italic;
+}
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  align-self: stretch;
+}
+.buttons button{
+  padding: 8px;
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+  margin: 4px 2px;
+  width: 75px;
+}

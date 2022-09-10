@@ -1,5 +1,5 @@
 {
-  "name": "bounty-hunter",
+  "name": "todo-backend",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -13,5 +13,4 @@
     "express": "^4.18.1",
     "uuid": "^9.0.0"
   }
-  
 }

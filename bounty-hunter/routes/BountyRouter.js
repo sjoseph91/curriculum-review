@@ -54,16 +54,32 @@ BountyRouter.route("/")
     .post((req, res) => {
         const newBounty = {...req.body, _id: uuid()};
         bounties.push(newBounty);
-        res.send(`Bounty ${newBounty.firstName} was added to the database.`)
+        res.send(newBounty)
 
     })
 
-//get one
-BountyRouter.get("/:id", (req, res) => {
+
+BountyRouter.route("/:id")
+
+    //get one
+    .get((req, res) => {
     const id = req.params.id;
     const selectedBounty = bounties.find(bounty => bounty._id === id);
     res.send(selectedBounty);
-})
+    })
+    .delete((req, res) => {
+        const id = req.params.id;
+        const index = bounties.findIndex(bounty => bounty._id === id);
+        bounties.splice(index, 1);
+        res.send(`Bounty ${id} Deleted`);
+    })
+    .put((req, res) => {
+        const id = req.params.id;
+        const desiredBounty = bounties.find(bounty => bounty._id === id);
+        const updateObject = req.body;
+        const updatedBounty = Object.assign(desiredBounty, updateObject);
+        res.send(updatedBounty)
+    })
 
 
 
