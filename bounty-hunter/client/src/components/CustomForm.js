@@ -7,24 +7,35 @@ import { BountyContext } from "./BountyContext";
 
 
 function CustomForm(props){
-    const {btnText, isEdit} = props;
-    const {addBounty} = useContext(BountyContext);
+    const {
+        btnText, 
+        isEdit, 
+        toggleEdit, 
+        firstName,
+        lastName,
+        living,
+        bountyAmount,
+        type, 
+        _id: id
+    } = props;
+    const {addBounty, editBounty} = useContext(BountyContext);
     
     function submit(e){
         e.preventDefault();
         if (isEdit){
-            console.log("edit submision");
+            editBounty(id, formData);
+            toggleEdit()
         }else{
             addBounty(formData);
         }
     }
 
     const initialFormData = {
-    firstName: "",
-    lastName: "",
-    living: false,
-    bountyAmount: 0,
-    type:  "jedi"
+    firstName: firstName || "",
+    lastName: lastName || "",
+    living: living || false,
+    bountyAmount: bountyAmount || 0,
+    type: type || "jedi"
     }
 
 const [formData, setFormData] = useState(initialFormData);
@@ -55,7 +66,10 @@ function handleChange(event){
 }
 
     return (
-        <form onSubmit={submit}>
+        <form 
+            onSubmit={submit}
+            className={isEdit? "editForm" : ""}
+            >
             <input 
                 type="text"
                 name="firstName"
@@ -124,6 +138,11 @@ function handleChange(event){
                 </label>
             </div>
             <button>{btnText}</button>
+            {isEdit ? 
+            <button className="cancelEditButton" onClick={toggleEdit}>Cancel Edit</button>
+            : 
+            ""
+            }
             
 
 

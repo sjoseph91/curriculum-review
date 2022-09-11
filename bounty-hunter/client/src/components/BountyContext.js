@@ -30,11 +30,19 @@ function BountyContextProvider(props){
             })
             .catch(err => console.log(err));
     }
+    function editBounty(id, editObj){
+        axios.put(`/bounty/${id}`, editObj)
+            .then(res => {
+                setBounties(prevBounties => prevBounties.map(bounty => bounty._id === id ? res.data : bounty));
+            })
+            .catch(err => console.log(err));
+    }
 
     const contextData = {
         bounties, 
         addBounty, 
-        deleteBounty
+        deleteBounty,
+        editBounty
     }
     return (
         <BountyContext.Provider value={{...contextData}}>
