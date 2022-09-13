@@ -1,6 +1,7 @@
 const express = require("express");
 const BountyRouter = express.Router();
 const {v4: uuid} = require("uuid");
+const Bounty = require("../models/bounty")
 
 const bounties = [
     {
@@ -39,22 +40,25 @@ const bounties = [
 
 
 BountyRouter.route("/")
-    .get((req, res) => {
-        //get by type
-        const hasQueryString = (Object.keys(req.query).length !== 0);
-        
-        if (hasQueryString){
-            const type = req.query.type;
-            const selectedBounties = bounties.filter(bounty => bounty.type === type);
-            res.send(selectedBounties);
-        }else{
-            res.send(bounties);
-        }
+    .get((req, res, next) => {
+        Bounty.find((err, bounties) => {
+            if(err){
+                res.status(500);
+                return next(err);
+            }
+            res.status(200).send(bounties);
+        })
     })
-    .post((req, res) => {
-        const newBounty = {...req.body, _id: uuid()};
-        bounties.push(newBounty);
-        res.send(newBounty)
+    .post((req, res, next) => {
+        const newBounty = new Bounty(req.body)
+        newBounty.save((err, addedBounty) => {
+            if (err){
+                res.status(500);
+                return next(err);
+            }else{
+                res.status(201).send(addedBounty);
+            }
+        })
 
     })
 
