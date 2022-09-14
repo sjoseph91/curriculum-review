@@ -71,18 +71,30 @@ BountyRouter.route("/:id")
     const selectedBounty = bounties.find(bounty => bounty._id === id);
     res.send(selectedBounty);
     })
-    .delete((req, res) => {
+    .delete((req, res, next) => {
         const id = req.params.id;
-        const index = bounties.findIndex(bounty => bounty._id === id);
-        bounties.splice(index, 1);
-        res.send(`Bounty ${id} Deleted`);
+        Bounty.findByIdAndDelete(id, (...args) => {
+            console.log(args)
+            if (err){
+                res.status(400);
+                return next (err);
+            }else{
+                //you can send back anything you want.
+                res.status(200).send(deletedBounty)
+            }
+        })
     })
-    .put((req, res) => {
+    .put((req, res, next) => {
         const id = req.params.id;
-        const desiredBounty = bounties.find(bounty => bounty._id === id);
         const updateObject = req.body;
-        const updatedBounty = Object.assign(desiredBounty, updateObject);
-        res.send(updatedBounty)
+        Bounty.findByIdAndUpdate(id, updateObject, {new: true}, (err, updatedBounty) => {
+            if (err){
+                res.status(500);
+                return next(err)
+            }else{
+                res.status(201).send(updatedBounty);
+            }
+        })
     })
 
 
